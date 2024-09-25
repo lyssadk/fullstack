@@ -1,6 +1,6 @@
 import { useState } from "react"
-import PropTypes from 'prop-types';
 
+// eslint-disable-next-line react/prop-types
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("")
 
@@ -29,6 +29,3 @@ export function NewTodoForm({ onSubmit }) {
   )
 }
 
-NewTodoForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-}

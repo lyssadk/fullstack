@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import { TodoItem } from "./TodoItem"
-import PropTypes from 'prop-types';
+
 
 export function TodoList({ todos, toggleTodo, deleteTodo }) {
   return (
@@ -19,8 +20,3 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
   )
 }
 
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
-  toggleTodo: PropTypes.func.isRequired,
-  deleteTodo: PropTypes.func.isRequired,
-};
