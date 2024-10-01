@@ -31,6 +31,7 @@ export default async function InvoicesTable({
                         className="mr-2 rounded-full"
                         width={28}
                         height={28}
+                        // i readded this in because the linter was complaining (obviously haha) and it made squiggly lines i couldn't ignore
                         alt={`${invoice.name}'s profile picture`}
                       />
                       <p>{invoice.name}</p>
