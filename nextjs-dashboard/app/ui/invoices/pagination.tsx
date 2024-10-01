@@ -19,10 +19,9 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
     params.set('page', pageNumber.toString());
     return `${pathname}?${params.toString()}`;
   };
-  
+
   return (
     <>
-      {/*  NOTE: Uncomment this code in Chapter 11 */}
 
       <div className="inline-flex">
         <PaginationArrow
