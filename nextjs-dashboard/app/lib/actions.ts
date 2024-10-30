@@ -111,19 +111,15 @@ export async function createInvoice(prevState: State, formData: FormData) {
     redirect('/dashboard/invoices');
   }
 
-  export async function deleteInvoice(id: string) {
-    // // testing purposes
-    throw new Error('Failed to Delete Invoice');
-    
-    try {
-      await sql`DELETE FROM invoices WHERE id = ${id}`;
-      revalidatePath('/dashboard/invoices');
-      return { message: 'Deleted Invoice.' };
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error) {
-      return { message: 'Database Error: Failed to Delete Invoice.' };
-    }
+export async function deleteInvoice(id: string) {
+  try {
+    await sql`DELETE FROM invoices WHERE id = ${id}`;
+    revalidatePath('/dashboard/invoices');
+    return { message: 'Deleted Invoice.' };
+  } catch (error) {
+    return { message: 'Database Error: Failed to Delete Invoice.' };
   }
+}
  
 export async function authenticate(
   prevState: string | undefined,
